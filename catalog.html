@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Сладкие Мечты</title>
+    <link rel="stylesheet/less" type="text/css" href="css/common.less">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/user-state.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/card.js"></script>
+</head>
+<body>
+    <div id="app">
+    <!-- Заголовок раздела навигации -->
+<header>
+    <nav class="navbar">
+        <a href="ind.html" class="logo">Сладкие Мечты</a>
+        <div class="nav-links">
+            <span id="userName" style="display: none;"></span>
+            <a href="ind.html">Главная</a>
+            <a href="catalog.html" class="active">Каталог</a>
+            <a href="auth.html" id="loginButton" class="login-link">Войти</a>
+            <a href="#" id="logoutButton" style="display: none;">Выйти</a>
+        </div>
+        <div class="cart-container">
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <div class="catalog-container">
+        <aside class="filters">
+            <div class="filter-section">
+                <h3>Поиск</h3>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Поиск по названию...">
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Сортировка</h3>
+                <div class="sort-container">
+                    <select id="sort-select">
+                        <option value="nameAsc">По названию (А-Я)</option>
+                        <option value="nameDesc">По названию (Я-А)</option>
+                        <option value="priceAsc">По цене (возрастание)</option>
+                        <option value="priceDesc">По цене (убывание)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Категории</h3>
+                <div class="category-checkboxes">
+                    <label>
+                        <input type="checkbox" name="category" value="Круассаны"> Круассаны
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="Торты"> Торты
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="Печенье"> Печенье
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="Другое"> Другое
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <!-- Основная область контента для продуктов каталога -->
+        <main class="catalog-content">
+            <div class="catalog-section">
+                <div class="product-grid">
+                    <!-- Продукты будут здесь -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <h2>Ваша корзина</h2>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <span>Итого:</span>
+                <span class="total-amount">0₽</span>
+            </div>
+            <button class="checkout-button">Оформить заказ</button>
+        </div>
+    </div>
+    </div>
+    <!-- Нижний колонтитул с информацией об авторских правах -->
+    <footer class="footer">
+        <p>&copy; 2025 Сладкие Мечты. Все права защищены.</p>
+    </footer>
+</body>
+</html>

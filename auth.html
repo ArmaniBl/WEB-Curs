@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация - Сладкие Мечты</title>
+    <link rel="stylesheet/less" type="text/css" href="css/common.less">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/user-state.js"></script>
+    <script src="js/auth.js"></script>
+</head>
+<body>
+    <div id="app">
+    <!-- Заголовок раздела навигации -->
+    <header>
+        <nav class="navbar">
+            <a href="ind.html" class="logo">Сладкие Мечты</a>
+            <div class="nav-links">
+                <span id="userName" style="display: none;"></span>
+                <a href="ind.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="auth.html" class="active">Войти</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Основная область контента -->
+    <main>
+        <section class="auth-container">
+            <div class="auth-box">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Вход</button>
+                    <button class="auth-tab" data-tab="register">Регистрация</button>
+                </div>
+
+                <!-- Форма входа -->
+                <form id="loginForm" class="auth-form active" @submit.prevent="handleLogin">
+                    <h2>Добро пожаловать!</h2>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" v-model="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" v-model="loginPassword" placeholder="Пароль" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" v-model="rememberMe">
+                            <span>Запомнить меня</span>
+                        </label>
+                        <a href="ind.html#contact" class="forgot-password">Забыли пароль?</a>
+                    </div>
+                    <button type="submit" class="auth-button">Войти</button>
+                </form>
+
+                <!-- Форма регистрации -->
+                <form id="registerForm" class="auth-form" @submit.prevent="handleRegister">
+                    <h2>Создать аккаунт</h2>
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" v-model="registerName" placeholder="Имя" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" v-model="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" v-model="registerPassword" placeholder="Пароль" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" v-model="confirmPassword" placeholder="Подтвердите пароль" required>
+                    </div>
+                    <button type="submit" class="auth-button">Зарегистрироваться</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Нижний колонтитул с информацией об авторских правах -->
+    <footer class="footer">
+        <p>&copy; 2025 Сладкие Мечты. Все права защищены.</p>
+    </footer>
+</div>
+</body>
+</html>

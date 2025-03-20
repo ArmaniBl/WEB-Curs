@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "login": "admin@admin",
+            "username": "admin",
+            "password": "admin",
+            "role": "admin"
+        },
+        {
+            "login": "user@user",
+            "username": "user",
+            "password": "user",
+            "role": "user"
+        },
+        {
+            "login": "tset@test",
+            "username": "test",
+            "password": "test",
+            "role": "user"
+        },
+        {
+            "login": "aarrmmaanniioo@gmail.com",
+            "username": "Арман",
+            "password": "arman",
+            "role": "user"
+        },
+        {
+            "login": "test1@mail",
+            "username": "test1",
+            "password": "test1",
+            "role": "user"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "id": 2,
+        "name": "Шоколадный круассан",
+        "price": 170,
+        "image": "images/chocolate-croissant.jpg",
+        "category": "Круассаны",
+        "isPopular": false
+    },
+    {
+        "id": 3,
+        "name": "Шоколадный торт",
+        "price": 2500,
+        "image": "images/chocolate-cake.jpg",
+        "category": "Торты",
+        "isPopular": true
+    },
+    {
+        "id": 4,
+        "name": "Клубничный торт",
+        "price": 2300,
+        "image": "images/strawberry-cake.jpg",
+        "category": "Торты",
+        "isPopular": false
+    },
+    {
+        "id": 5,
+        "name": "Черничный чизкейк",
+        "price": 2200,
+        "image": "images/blueberry-cheesecake.jpg",
+        "category": "Другое",
+        "isPopular": true
+    },
+    {
+        "id": 6,
+        "name": "Морковный торт",
+        "price": 2400,
+        "image": "images/carrot-cake.jpg",
+        "category": "Торты",
+        "isPopular": true
+    },
+    {
+        "id": 7,
+        "name": "Шоколадное печенье",
+        "price": 120,
+        "image": "images/chocolate-cookies.jpg",
+        "category": "Печенье",
+        "isPopular": false
+    },
+    {
+        "id": 8,
+        "name": "Овсяное печенье",
+        "price": 100,
+        "image": "images/oatmeal-cookies.jpg",
+        "category": "Печенье",
+        "isPopular": false
+    },
+    {
+        "id": 1,
+        "name": "Классический круассан",
+        "image": "images/classic-croissant.jpg",
+        "price": 150,
+        "category": "Круассаны",
+        "isPopular": true
+    },
+    {
+        "id": 9,
+        "name": "Карамельный эклер",
+        "image": "images/caramel-eclair.jpg",
+        "price": 150,
+        "category": "Другое",
+        "isPopular": true
+    }
+]

@@ -1,0 +1,368 @@
+/* Тело страницы */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    background-attachment: fixed;
+    color: 2d3436;
+}
+
+/* Контейнер авторизации */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 100px;
+    background: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+    position: relative;
+}
+
+/* Псевдоэлемент для затемнения фона */
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px);
+}
+
+/* Бокс авторизации */
+.auth-box {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+/* Вкладки авторизации */
+.auth-tabs {
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+/* Вкладка авторизации */
+.auth-tab {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Эффект наведения на вкладку */
+.auth-tab:hover {
+    color: var(--primary-color);
+}
+
+/* Активная вкладка */
+.auth-tab.active {
+    color: var(--primary-color);
+}
+
+/* Подчеркивание для активной вкладки */
+.auth-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+/* Форма авторизации */
+.auth-form {
+    display: none;
+    padding: 2rem;
+}
+
+/* Активная форма авторизации */
+.auth-form.active {
+    display: block;
+}
+
+/* Заголовок формы авторизации */
+.auth-form h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Группа форм */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Иконка в группе формы */
+.form-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    z-index: 1;
+}
+
+/* Поле ввода в группе формы */
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 2.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Фокус на поле ввода */
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+/* Опции формы */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Запомнить меня */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+/* Чекбокс запомнить меня */
+.remember-me input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Забыли пароль */
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Эффект наведения на забыли пароль */
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка авторизации */
+.auth-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Эффект наведения на кнопку авторизации */
+.auth-button:hover {
+    background: #ff3737;
+}
+
+/* Социальный вход */
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Социальный вход текст */
+.social-login p {
+    color: #666;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/* Линии для социального входа */
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+/* Социальные иконки */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Социальная иконка */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Эффект наведения на социальную иконку */
+.social-icon:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Активная форма авторизации с анимацией */
+.auth-form.active {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    /* Контейнер авторизации на мобильных устройствах */
+    .auth-container {
+        padding: 1rem;
+    }
+
+    /* Бокс авторизации на мобильных устройствах */
+    .auth-box {
+        border-radius: 10px;
+    }
+
+    /* Форма авторизации на мобильных устройствах */
+    .auth-form {
+        padding: 1.5rem;
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Контейнер авторизации */
+    .auth-container {
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    /* Бокс авторизации */
+    .auth-box {
+        width: 100%; /* Allow full width on mobile */
+        max-width: 100%; /* Remove max-width constraint */
+        padding: 1rem; /* Add padding for mobile */
+    }
+
+    /* Заголовок формы авторизации */
+    .auth-form h2 {
+        font-size: 1.5rem; /* Reduce font size for mobile */
+    }
+
+ /* Поле ввода в группе формы */
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 3rem; /* Increased left padding */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Поле ввода в группе формы */
+    .form-group input {
+        padding: 0.8rem 1rem 0.8rem 2.5rem; /* Adjust left padding for mobile */
+        font-size: 0.9rem; /* Reduce font size for mobile */
+    }
+}
+
+/* Additional media queries for smaller devices */
+@media (max-width: 480px) {
+    /* Поле ввода в группе формы */
+    .form-group input {
+        padding: 0.6rem 0.8rem 0.6rem 2rem; /* Further adjust left padding */
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+}
+
+    /* Кнопка авторизации */
+    .auth-button {
+        padding: 0.6rem; /* Adjust padding for mobile */
+        font-size: 0.9rem; /* Reduce font size for mobile */
+    }
+
+    /* Социальный вход */
+    .social-login {
+        margin-top: 1rem; /* Adjust margin for mobile */
+    }
+
+    /* Adjust other elements as necessary */
+}
+
+/* Additional media queries for smaller devices */
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .auth-form h2 {
+        font-size: 1.3rem; /* Further reduce font size */
+    }
+
+    .form-group input {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .auth-button {
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+}
